@@ -1,0 +1,414 @@
+/* ===== General Styles ===== */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8; /* default for other pages */
+}
+
+/* ===== Homepage Hero Background ===== */
+body.homepage {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 5;
+}
+
+.site-header nav a {
+  margin: 0 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Hero Section (centered content) ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../images/background.jpg"); /* make sure the path and name are correct */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* keeps it static when scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: none; /* optional overlay for contrast */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 900px;
+  padding: 20px;
+  color: white;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 120px;
+  opacity: 0.85;
+  z-index: 2;
+}
+
+.home-links {
+  margin-top: 10px;
+}
+
+.home-links a {
+  display: inline-block;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  background-color: #0066cc;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.home-links a:hover {
+  background-color: #004c99;
+}
+
+
+/* ===== Main Content ===== */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Handcrafted Gallery ===== */
+/* ===== Handcrafted Gallery ===== */
+.handcrafted-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.handcrafted-gallery img {
+  width: 100%;
+  height: auto;        /* maintain aspect ratio */
+  object-fit: cover;   /* fills the box nicely without distortion */
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  max-height: 300px;   /* keeps images similar size */
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.handcrafted-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.handcrafted-video {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.handcrafted-video video {
+  max-width: 80%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+
+}
+
+/* ===== Portfolio Gallery ===== */
+.portfolio-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.portfolio-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  max-height: 400px;
+}
+
+.portfolio-video {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.portfolio-video video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ===== Section Spacing ===== */
+.section-spacing {
+  margin-bottom: 60px;
+}
+
+/* ===== Project Cards ===== */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card .mini-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.project-card .mini-gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  max-height: 180px; /* keeps images small and consistent */
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card .mini-gallery img:hover {
+  transform: scale(1.03);
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.project-card a:hover {
+  background-color: #004c99;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+}
+
+/* ===== Contact Page ===== */
+.contact-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: #222;
+}
+
+.contact-container h2 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #0066cc;
+}
+
+.contact-container p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact-container a {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-container a:hover {
+  color: #004c99;
+  text-decoration: underline;
+}
+
+/* Optional: responsive adjustments */
+@media (max-width: 768px) {
+  .contact-container {
+    margin: 40px 20px;
+    padding: 30px 20px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .contact-container p {
+    font-size: 1rem;
+  }
+}
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 90px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .hero-content {
+    padding: 25px;
+  }
+
+  .handcrafted-gallery img {
+    max-height: 250px;
+  }
+
+  .portfolio-gallery img {
+    max-height: 250px;
+  }
+
+  .home-links a {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .handcrafted-gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .handcrafted-gallery img {
+    max-height: 200px;
+  }
+}
+
+/* ===== Cover Images (full view without cropping) ===== */
+.cover-image {
+  width: 100%;
+  max-width: 600px;    /* limit how big it can get */
+  height: auto;        /* maintain aspect ratio */
+  object-fit: contain; /* show entire image */
+  border-radius: 6px;
+  background-color: #f0f0f0;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  margin: 0 auto 20px auto; /* center it with margin */
+  display: block;
+}
+
+/* Project card cover images */
+.project-cover {
+  width: 100%;
+  max-height: 180px;   /* keeps all covers consistent */
+  object-fit: cover;   /* fills the space without stretching */
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+
+/* Contact Page Block */
+.contact-block {
+  max-width: 500px;
+  margin: 50px auto;       /* centers the block */
+  padding: 30px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+.contact-block h2 {
+  margin-top: 0;
+}
+
+.contact-block a {
+  color: #0066cc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+.download-resume {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.download-resume:hover {
+  background-color: #004c99;
+}
+
+.cover-photo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.cover-photo img {
+  width: 100%;       /* fill container width */
+  max-width: 900px;  /* optional: limit very large screens */
+  height: auto;      /* maintain aspect ratio */
+  object-fit: contain; /* ensures full image is visible, no cropping */
+  border-radius: 6px;
+  background-color: #f0f0f0; /* optional placeholder background */
+}

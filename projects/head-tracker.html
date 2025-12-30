@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FPV RC Car Head Tracker | Matthew Jones</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1>FPV RC Car Head Tracker</h1>
+  <nav>
+    <a href="../portfolio.html">Back to Portfolio</a>
+  </nav>
+</header>
+
+<main class="project-container">
+
+  <section class="section-spacing">
+    <h2>Overview</h2>
+    <p>
+      Custom-built head tracking module for an FPV RC car, fully 3D printed
+      and programmed using Arduino. The module translates head movements into
+      camera orientation commands for immersive remote driving experiences.
+    </p>
+  </section>
+
+  <section class="section-spacing">
+    <h2>Design and Fabrication</h2>
+    <p>
+      The enclosure, mount, and mechanical parts were designed in CAD and
+      3D printed for precise fit. Electronics integration included an MPU6050
+      IMU and signal interfacing to override potentiometer channels for
+      control of the car’s servo mechanisms.
+    </p>
+  </section>
+
+  <section class="section-spacing">
+    <h2>Challenges and Solutions</h2>
+    <p>
+      A key challenge was minimizing sensor drift and ensuring smooth tracking.
+      This was overcome using filtered PWM signals, calibration routines, and
+      software corrections to maintain accurate alignment between the head
+      motion and the FPV camera orientation.
+    </p>
+  </section>
+
+  <section class="section-spacing">
+    <h2>Head Tracker in Action</h2>
+    <div class="handcrafted-video">
+      <video width="800" controls>
+        <source src="../images/portfolio/head-tracker/headtracker-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2025 Matthew Jones</p>
+</footer>
+
+</body>
+</html>
