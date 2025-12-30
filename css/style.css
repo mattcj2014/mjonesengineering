@@ -140,7 +140,7 @@ main {
 }
 
 .handcrafted-video video {
-  max-width: 80%;
+  max-width: 50%;
   height: auto;
   border-radius: 6px;
   box-shadow: 0 3px 8px rgba(0,0,0,0.1);
